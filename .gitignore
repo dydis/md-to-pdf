@@ -1,0 +1,29 @@
+# -------------------------------------------------------------------
+# .gitignore for Markdown-to-PDF Renderer
+# -------------------------------------------------------------------
+
+# 1. Generated PDF Documents
+# Ignores all compiled PDFs
+*.pdf
+
+# 2. Temporary Pipeline Files
+# Ignores the temporary file created by generate_diagrams.py
+temp_diagram.mmd
+
+# 3. Generated Mermaid Images
+# Ignores the default image folders where diagrams are exported
+image/
+images/
+
+# 4. Python Environment & Cache
+# Standard ignores
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# 5. OS Generated Files
+Thumbs.db
+.DS_Store
