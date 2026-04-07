@@ -2,6 +2,8 @@
 
 This toolkit provides an automated pipeline to convert Markdown files into PDF documents. It features automatic rendering of Mermaid diagrams, rich LaTeX-based syntax highlighting, and native support for GitHub-style callouts.
 
+>[!NOTE] This toolkit is built with batch scripting and is designed specifically for **Windows** environments.
+
 ## Features
 
 * **PDF Generation**: Converts Markdown to PDF using Pandoc and the XeLaTeX engine.
@@ -25,7 +27,7 @@ To use this script seamlessly, you must have the required dependencies installed
 
 ### 2. File & Directory Structure
 
-Since you have added the script's directory to your system's PATH, ensure the files are organized exactly like this so the batch script can reliably locate its resources:
+Organize your files exactly as shown below. For the script to be accessible globally, **you must add the folder containing `render_md.bat` to your `PATH` environment variable**. This allows you to run the `render_md` command from any folder on your computer.
 
 ```text
 /
@@ -44,7 +46,8 @@ Since you have added the script's directory to your system's PATH, ensure the fi
 ## Usage Instructions
 
 ### Standard Conversion
-To convert a Markdown file into a PDF:
+Open a Command Prompt or PowerShell window in the folder containing your Markdown file, then run:
+
 ```cmd
 render_md my_document.md
 ```
@@ -85,16 +88,16 @@ graph TD;
 The `callout.lua` filter natively converts GitHub callout syntax into LaTeX boxes. 
 
 ```markdown
-> [!NOTE]
+>[!NOTE]
 > This is a standard note.
 
-> [!WARNING]
+>[!WARNING]
 > This generates an orange warning box.
 
-> [!IMPORTANT]
+>[!IMPORTANT]
 > This generates a red exclamation box.
 
-> [!TIP]
+>[!TIP]
 > This generates a green lightbulb box.
 ```
 
