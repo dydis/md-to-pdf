@@ -19,7 +19,7 @@ To use this script seamlessly, you must have the required dependencies installed
 
 ### 1. Install Dependencies
 
-* **Pandoc**: The core document converter. Install from `https://pandoc.org/installing.html`.
+* **Pandoc**: The core document converter. Install from [Pandoc](https://pandoc.org/installing.html).
 * **Python**: Required to run the Mermaid diagram extraction script.
 * **Mermaid CLI**: Required to generate the diagram images. Install via Node.js: `npm install -g @mermaid-js/mermaid-cli`.
 * **LaTeX Distribution**: You need a LaTeX engine installed and added to your PATH because the script uses the `xelatex` engine.
