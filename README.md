@@ -51,12 +51,15 @@ render_md my_document.md
 This will generate the PDF in the same directory.
 
 ### Conversion with Dynamic Tagging
-To append a randomized Copy ID to the filename and embed it in the PDF footer:
+
+You can trigger the internal `use_tag` variable by passing the `/tag` argument when executing the script. This is useful for generating uniquely ientifiable copies of the same document. 
+
 ```cmd
 render_md my_document.md /tag
 ```
-* **Output:** Appends a dynamic Copy ID (e.g., `_12345-67890.pdf`) to the output file.
-* **Effect:** Injects a custom LaTeX header/footer setup (`\pagestyle{fancy}`) that displays `ID Copie : <Random_ID> - Page \thepage` on every page.
+
+* **Output File:** The script dynamically generates a random `COPY_ID` and appends it to the filename (e.g., `my_document_12345-67890.pdf`).
+* **PDF Footer:** It automatically injects a custom LaTeX header and footer setup using `fancyhdr`. This displays `ID Copie : <Random_ID> - Page \thepage` centered at the bottom of every page in the document.
 
 ### Cleanup Generated Images
 The rendering process creates an `image` folder relative to your Markdown file to store the generated Mermaid diagrams. To delete this folder:
